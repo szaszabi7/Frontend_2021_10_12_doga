@@ -1,7 +1,7 @@
 li {
     list-style: none;
     border-bottom: 1px solid black;
-    width: fit-content;
+    width: 30%;
 }
 
 button {
@@ -10,4 +10,25 @@ button {
 
 .checked {
     text-decoration: line-through;
+}
+
+.closeButton {
+    float: right;
+}
+
+.checBoxCheck {
+    margin-right: 0.3em;
+}
+
+#todo {
+    border: 3px solid black;
+    width: fit-content;
+    margin-top: 1em;
+}
+
+#hozzaad {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    margin-top: 1em;
 }

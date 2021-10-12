@@ -8,25 +8,34 @@ function init() {
 function general() {
 
     let adat = document.getElementById('todo').value;
-    let li = document.createElement("li");
-    let input = document.createElement("input");
-    input.type = "checkbox";
-    let label = document.createElement("label");
-    var text = document.createTextNode(adat);
-    label.appendChild(text);
+    if (adat == "") {
+        alert("Nem lehet üres");
+        return;
+    } else {
+        let li = document.createElement("li");
+        var text = document.createTextNode(adat);
+        let label = document.createElement("label");
+        label.appendChild(text);
 
-    let close = document.createElement("button");
-    var x = document.createTextNode("x");
+        let input = document.createElement("input");
+        input.type = "checkbox";
+        input.className = "checBoxCheck";
 
-    close.appendChild(x);
-    input.addEventListener("click", done);
-    close.addEventListener("click", asd);
-    
-    li.appendChild(input);
-    li.appendChild(label);
-    li.appendChild(close);
+        let close = document.createElement("button");
+        var x = document.createTextNode("x");
+        close.className = "closeButton";
 
-    document.getElementById('lista').appendChild(li);
+        close.appendChild(x);
+        input.addEventListener("click", done);
+        close.addEventListener("click", asd);
+        
+        li.appendChild(input);
+        li.appendChild(label);
+        li.appendChild(close);
+
+        document.getElementById('lista').appendChild(li);
+        document.getElementById('todo').value = "";
+    }
 }
 
 function done(e) {
