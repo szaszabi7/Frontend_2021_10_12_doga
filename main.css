@@ -4,8 +4,10 @@ li {
     width: fit-content;
 }
 
-.delete {
+button {
     border: none;
-    text-align: right;
 }
 
+.checked {
+    text-decoration: line-through;
+}
